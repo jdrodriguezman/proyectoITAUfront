@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Crear Item Firebase</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <h1>Crear Item Firebase</h1>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-item>
+                <ion-label>id</ion-label>
+                <ion-input [(ngModel)]="firebase.id"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label>title</ion-label>
+                  <ion-input [(ngModel)]="firebase.title"></ion-input>
+                </ion-item>
+            </ion-card-content>
+
+            <ion-button margin expand="block" (click)="crear()">
+              enviar
+            </ion-button>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>

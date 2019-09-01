@@ -4,17 +4,17 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'listar-todos',
     pathMatch: 'full'
   },
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+  { 
+    path: 'listar-todos', 
+    loadChildren: './pages/listar-todos/listar-todos.module#ListarTodosPageModule' 
   },
-  {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  { path: 'listar-firebase', loadChildren: './pages/listar-firebase/listar-firebase.module#ListarFirebasePageModule' },
+  { path: 'create-fire-base', loadChildren: './pages/create-fire-base/create-fire-base.module#CreateFireBasePageModule' },
+  { path: 'delete-firebase', loadChildren: './pages/delete-firebase/delete-firebase.module#DeleteFirebasePageModule' },
+  { path: 'edit-firebase', loadChildren: './pages/edit-firebase/edit-firebase.module#EditFirebasePageModule' }
 ];
 
 @NgModule({

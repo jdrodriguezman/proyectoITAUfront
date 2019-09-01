@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Listar Todos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <h1>Listar Todos</h1>
+            <ion-row>
+              <ion-col sizeXs="12" sizeSm="6">
+                <ion-searchbar placeholder="id" (ionChange)="obtener()" [(ngModel)]="id"></ion-searchbar>
+              </ion-col>
+              <ion-col sizeXs="12" sizeSm="6">
+                <ion-searchbar placeholder="title" (ionChange)="obtener()" [(ngModel)]="title"></ion-searchbar>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row class="cabeceras">
+                <ion-col size="2">Id</ion-col>
+                <ion-col>Title</ion-col>
+              </ion-row>
+              <ion-row class="cuerpo" *ngFor="let todo of todos" lines="inset">
+                <ion-col size="2">{{todo.id}}</ion-col>
+                <ion-col>{{todo.title}}</ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

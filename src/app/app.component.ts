@@ -12,14 +12,29 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
-      url: '/home',
-      icon: 'home'
+      title: 'Todos',
+      url: '/listar-todos',
+      icon: 'apps'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Listar Firebase',
+      url: '/listar-firebase',
+      icon: 'apps'
+    },
+    {
+      title: 'crear Firebase',
+      url: '/create-fire-base',
+      icon: 'apps'
+    },
+    {
+      title: 'editar Firebase',
+      url: '/edit-firebase',
+      icon: 'apps'
+    },
+    {
+      title: 'borrar Firebase',
+      url: '/delete-firebase',
+      icon: 'apps'
     }
   ];
 
